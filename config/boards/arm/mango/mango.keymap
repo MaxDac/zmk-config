@@ -40,10 +40,10 @@ keymap {
 default_layer {
     label = "BASE";
     bindings = <
-        &kp ESC     &kp Q       &kp W       &kp E       &kp R       &kp T               &kp Y       &kp U       &kp I       &kp O       &kp P       &kp BSPC
-        &kp TAB     &kp A       &kp S       &kp D       &kp F       &kp G               &kp H       &kp J       &kp K       &kp L       &kp SEMI    &kp SQT
-        &kp LSHFT   &mt LSHFT Z &kp X       &kp C       &kp V       &kp B               &kp N       &kp M       &kp COMMA   &kp DOT  &mt RSHFT FSLH &kp RSHFT
-                                      &lhkt NUM LGUI &kp LCTRL  &kp ENTER               &kp SPACE   &lhkt NAV BSPC &kp RALT
+        &kp TAB     &kp Q       &kp W       &kp E       &kp R       &kp T               &kp Y       &kp U       &kp I       &kp O       &kp P       &kp RGUI
+        &kp NAV     &kp A       &kp S       &kp D       &kp F       &kp G               &kp H       &kp J       &kp K       &kp L       &kp SEMI    &kp SQT
+        &kp LCTRL   &mt LSHFT Z &kp X       &kp C       &kp V       &kp B               &kp N       &kp M       &kp COMMA   &kp DOT  &mt RSHFT FSLH &kp RALT
+                                            &kp BSPC &kp LSHFT  &kp ENTER               &kp SPACE   &kp NUM &kp ESC
 
         &rgb_ug RGB_BRD &kp C_VOL_UP &rgb_ug RGB_BRI &kp C_VOL_DN   &none               &none       &kp RIGHT   &kp UP      &kp LEFT    &kp DOWN
     >;
