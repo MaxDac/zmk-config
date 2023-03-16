@@ -110,8 +110,8 @@ numbers_layer {
 *      _____.-----| F2  |_____| F4  | F5  |                     |LBKT |RBKT |_____|RBRC |-----._____
 *     |BTCLR|     |-----| F8  |-----|_____|                     |_____|-----| UP  |-----|MINUS|     |  
 *     |_____|-----| F7  |_____| F9  | F10 |                     |LEFT | DOWN|_____|RIGHT|-----|_____|  
-*     |BTTOG| F6  |-----|     |-----|_____|                     |_____|-----|PG_UP|-----|GAME |     |  
-*     |_____|-----|     |_____| F11 | F12 |                     | HOME|PG_DN|_____| END |-----|_____|  
+*     |BTTOG| F6  |-----|PASTE|-----|_____|                     |_____|-----|PG_UP|-----|GAME |     |  
+*     |_____|-----|COPY |_____| F11 | F12 |                     | HOME|PG_DN|_____| END |-----|_____|  
 *     |BTNXT| F1  |-----'   .-'---.=|_____|.-.._           _..-.|_____|=.---'-.   '-----| / ? |     |
 *     !_____!-----'         | DEL |SHIFT| /     /         \     \ | NUM |RALT |         '-----!_____!
 *                           '-----!_____!/ ENT /           \ SPC \!_____!-----'
@@ -130,9 +130,9 @@ numbers_layer {
 navigation_layer {
     label = "NAV";
     bindings = <
-        &bt BT_CLR &kp NO      &kp F2       &kp F3      &kp F4  &kp F5        &kp LBKT &kp RBKT  &kp LBRC  &kp RBRC  &kp MINUS &trans
+        &bt BT_CLR &trans      &kp F2       &kp F3      &kp F4  &kp F5        &kp LBKT &kp RBKT  &kp LBRC  &kp RBRC  &kp MINUS &trans
       &out OUT_TOG &kp F6      &kp F7       &kp F8      &kp F9  &kp F10       &kp LEFT &kp DOWN  &kp UP    &kp RIGHT &tog GAME &trans
-        &bt BT_NXT &kp F1      &kp NO       &bt NO      &kp F11 &kp F12       &kp HOME &kp PG_DN &kp PG_UP &kp END   &kp FSLH  &trans
+        &bt BT_NXT &kp F1      &kp K_COPY   &bt K_PASTE &kp F11 &kp F12       &kp HOME &kp PG_DN &kp PG_UP &kp END   &kp FSLH  &trans
                                         &kp DEL     &trans       &trans       &trans      &trans      &kp RALT      
                                             
                     &trans     &trans       &trans      &trans       &trans             &trans      &trans      &trans      &trans      &trans
