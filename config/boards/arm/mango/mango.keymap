@@ -174,7 +174,7 @@ type_layer {
         &kp LSHIFT      &kp Q       &kp W       &kp E       &kp R       &kp T               &kp Y       &kp U       &kp I       &kp O       &kp P       &kp LSHIFT
         &kp LSHIFT      &kp A       &kp S       &kp D       &kp F       &kp G               &kp H       &kp J       &kp K       &kp L       &kp SEMI    &kp LSHIFT
         &kp LSHIFT      &kp Z       &kp X       &kp C       &kp V       &kp B               &kp N       &kp M       &kp COMMA   &kp DOT     &kp SQT     &kp LSHIFT
-                                                &kp BSPC &kp LSHFT  &mt LALT ENTER          &kp SPACE   &tog TYPE   &mt LCTRL 
+                                                &kp BSPC &kp LSHFT  &mt LALT ENTER          &kp SPACE   &tog TYPE   &mt LCTRL FSLH
 
         &rgb_ug RGB_BRD &kp C_VOL_UP &rgb_ug RGB_BRI &kp C_VOL_DN   &none               &none       &kp RIGHT   &kp UP      &kp LEFT    &kp DOWN
     >;
