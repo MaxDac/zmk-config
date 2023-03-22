@@ -9,6 +9,7 @@
 #define GAME 1
 #define NUM  2
 #define NAV  3
+#define TYPE 4
 
 / {
 keymap {
@@ -110,7 +111,7 @@ numbers_layer {
 *      _____.-----| F2  |_____| F4  | F5  |                     |LBKT |RBKT |_____|RBRC |-----._____
 *     |BTCLR|     |-----| F8  |-----|_____|                     |_____|-----| UP  |-----|MINUS|     |  
 *     |_____|-----| F7  |_____| F9  | F10 |                     |LEFT | DOWN|_____|RIGHT|-----|_____|  
-*     |BTTOG| F6  |-----|PASTE|-----|_____|                     |_____|-----|PG_UP|-----|GAME |     |  
+*     |BTTOG| F6  |-----|TYPE |-----|_____|                     |_____|-----|PG_UP|-----|GAME |     |  
 *     |_____|-----|COPY |_____| F11 | F12 |                     | HOME|PG_DN|_____| END |-----|_____|  
 *     |BTNXT| F1  |-----'   .-'---.=|_____|.-.._           _..-.|_____|=.---'-.   '-----| / ? |     |
 *     !_____!-----'         | DEL |SHIFT| /     /         \     \ | NUM |RALT |         '-----!_____!
@@ -132,10 +133,50 @@ navigation_layer {
     bindings = <
         &bt BT_CLR &trans      &kp F2       &kp F3      &kp F4  &kp F5        &kp LBKT &kp RBKT  &kp LBRC  &kp RBRC  &kp MINUS &trans
       &out OUT_TOG &kp F6      &kp F7       &kp F8      &kp F9  &kp F10       &kp LEFT &kp DOWN  &kp UP    &kp RIGHT &tog GAME &trans
-        &bt BT_NXT &kp F1      &kp K_COPY   &kp K_PASTE &kp F11 &kp F12       &kp HOME &kp PG_DN &kp PG_UP &kp END   &kp FSLH  &trans
+        &bt BT_NXT &kp F1      &tog TYPE    &kp K_PASTE &kp F11 &kp F12       &kp HOME &kp PG_DN &kp PG_UP &kp END   &kp FSLH  &trans
                                         &kp DEL     &trans       &trans       &trans      &trans      &kp RALT      
                                             
                     &trans     &trans       &trans      &trans       &trans             &trans      &trans      &trans      &trans      &trans
+    >;
+};
+
+/*                                  
+*  TYPING LAYER 
+*  Exactly the same as the default layer, but without all the layer switching keys, and the ALT.
+*  This is meant to allow free typing experience.
+*  This layer should be easily swappable, and returning to the default layer should be very easy.
+*
+*        ` ~             _____                                               _____
+*        |        .-----|  E  |-----._____                       _____.-----|  I  |-----.
+*      _____.-----|  W  |_____|  R  |  T  |                     |  Y  |  U  |_____|  O  |-----._____
+*     |     |  Q  |-----|  D  |-----|_____|                     |_____|-----|  K  |-----|  P  |     |  
+*     |_____|-----|  S  |_____|  F  |  G  |                     |  H  |  J  |_____|  L  |-----|_____|  
+*     |     |  A  |-----|  C  |-----|_____|                     |_____|-----| , < |-----| ; : |     |  
+*     |_____|-----|  X  |_____|  V  |  B  |                     |  N  |  M  |_____| . > |-----|_____|  
+*     |     |  Z  |-----'   .-'---.=|_____|.-.._           _..-.|_____|=.---'-.   '-----| ' " |     |
+*     !_____!-----'         | BSP |SHIFT| /LALT /         \     \ | DEF.|LCTRL|         '-----!_____!
+*                           '-----!_____!/ ENT /           \ SPC \!_____!-----' 
+*                                       '--.._/             \_..--'
+*
+*
+*                          VUP                                              MUP
+*                          __                                                __
+*                       __|  |__                                          __|  |__
+*                PREV  |_TGPLAY_|  NEXT                           MLEFT  |_MCLK-1_|  MRIGHT
+*                         |__|                                              |__|
+*                                                                             
+*                        VDOWN                                             MDOWN
+*/
+
+default_layer {
+    label = "TYPE";
+    bindings = <
+        &kp LSHIFT      &kp Q       &kp W       &kp E       &kp R       &kp T               &kp Y       &kp U       &kp I       &kp O       &kp P       &kp LSHIFT
+        &kp LSHIFT      &kp A       &kp S       &kp D       &kp F       &kp G               &kp H       &kp J       &kp K       &kp L       &kp SEMI    &kp LSHIFT
+        &kp LSHIFT      &kp Z       &kp X       &kp C       &kp V       &kp B               &kp N       &kp M       &kp COMMA   &kp DOT     &kp SQT     &kp LSHIFT
+                                                &kp BSPC &kp LSHFT  &mt LALT ENTER          &kp SPACE   &tog TYPE   &kp LCTRL
+
+        &rgb_ug RGB_BRD &kp C_VOL_UP &rgb_ug RGB_BRI &kp C_VOL_DN   &none               &none       &kp RIGHT   &kp UP      &kp LEFT    &kp DOWN
     >;
 };
 
