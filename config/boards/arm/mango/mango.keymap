@@ -209,7 +209,7 @@ combos {
 // TOGGLE TYPE
     combo_type {
         timeout-ms = <20>;
-        key-position = <1 2>;
+        key-positions = <1 2>;
         bindings = <&tog TYPE>;
     };
 
