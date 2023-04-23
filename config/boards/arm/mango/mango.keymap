@@ -100,7 +100,7 @@ game_layer {
     label = "GAME";
     bindings = <
         &trans      &trans      &trans      &trans      &trans      &trans              &trans      &trans      &trans      &trans      &trans      &trans
-        &trans      &trans      &trans      &trans      &trans      &trans              &trans      &trans      &trans      &trans      &trans      &trans
+        &trans      &trans      &trans      &trans      &trans      &trans              &trans      &trans      &trans      &trans      &trans      &tog GAME
         &trans      &trans      &trans      &trans      &trans      &kp ENTER           &trans      &trans      &trans      &trans      &trans      &trans
                                             &kp ESC     &trans      &kp SPACE           &trans      &trans      &trans
 
