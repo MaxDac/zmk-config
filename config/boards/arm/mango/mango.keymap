@@ -7,9 +7,9 @@
 
 #define BASE 0
 #define TYPE 1
-#define NUM  2
-#define NAV  3
-#define GAME 4
+#define GAME 2
+#define NUM  3
+#define NAV  4
 
 / {
 keymap {
@@ -92,6 +92,22 @@ type_layer {
     >;
 };
 
+/* 
+*  GAME - this just swaps space and enter, and the esc with the backspace. An additional enter is added to the left side.
+*/
+
+game_layer {
+    label = "GAME";
+    bindings = <
+        &trans      &trans      &trans      &trans      &trans      &trans              &trans      &trans      &trans      &trans      &trans      &trans
+        &trans      &trans      &trans      &trans      &trans      &trans              &trans      &trans      &trans      &trans      &trans      &tog GAME
+        &trans      &trans      &trans      &trans      &trans      &kp ENTER           &trans      &trans      &trans      &trans      &trans      &trans
+                                            &kp ESC     &trans      &kp SPACE           &trans      &trans      &trans
+
+                    &trans      &trans      &trans      &trans      &trans              &trans      &trans      &trans      &trans      &trans
+    >;
+};
+
 /*                                  
 *  NUMBERS
 *                        _____                                               _____
@@ -161,44 +177,6 @@ navigation_layer {
                                         &kp DEL     &trans       &trans       &trans      &trans      &kp RALT      
                                         
                     &trans     &trans       &trans      &trans       &trans             &trans      &trans      &trans      &trans      &trans
-    >;
-};
-
-/* 
-*  GAME
-*  This just swaps space and enter, and the esc with the backspace. An additional enter is added to the left side.
-*
-*        ` ~             _____                                               _____
-*        |        .-----|  E  |-----._____                       _____.-----|  I  |-----.
-*      _____.-----|  W  |_____|  R  |  T  |                     |  Y  |  U  |_____|  O  |-----._____
-*     |     |  Q  |-----|  D  |-----|_____|                     |_____|-----|  K  |-----|  P  |     |  
-*     |_____|-----|  S  |_____|  F  |  G  |                     |  H  |  J  |_____|  L  |-----|_____|  
-*     |     |  A  |-----|  C  |-----|_____|                     |_____|-----| , < |-----| ; : |     |  
-*     |_____|-----|  X  |_____|  V  |ENTER|                     |  N  |  M  |_____| . > |-----|_____|  
-*     |     |  Z  |-----'   .-'---.=|_____|.-.._           _..-.|_____|=.---'-.   '-----| ' " |     |
-*     !_____!-----'         |BSP/N|SHIFT| /     /         \     \ | DEF.|? CTR|         '-----!_____!
-*                           '-----!_____!/ SPC /           \ SPC \!_____!-----' 
-*                                       '--.._/             \_..--'
-*
-*
-*                          VUP                                              MUP
-*                          __                                                __
-*                       __|  |__                                          __|  |__
-*                PREV  |_TGPLAY_|  NEXT                           MLEFT  |_MCLK-1_|  MRIGHT
-*                         |__|                                              |__|
-*                                                                             
-*                        VDOWN                                             MDOWN
-*/
-
-game_layer {
-    label = "GAME";
-    bindings = <
-        &kp N1      &kp Q       &kp W       &kp E       &kp N7      &kp LSHFT           &kp Y      &kp U       &kp I       &kp O       &kp P       &trans
-        &kp N2      &kp A       &kp S       &kp D       &kp N8      &kp LALT            &kp H      &kp J       &kp K       &kp L       &trans      &tog GAME
-        &kp N3      &kp N4      &kp N5      &kp N6      &kp N9      &kp ENTER           &kp N      &kp M       &trans      &trans      &trans      &trans
-                                            &kp ESC     &kp LCTRL   &kp SPACE           &kp kp ESC &kp RCTRL   &trans
-
-                    &trans      &trans      &trans      &trans      &trans              &trans      &trans      &trans      &trans      &trans
     >;
 };
 
