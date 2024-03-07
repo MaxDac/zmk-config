@@ -149,12 +149,12 @@ numbers_layer {
 *        ` ~             _____                                               _____
 *        |        .-----| F3  |-----._____                       _____.-----|LBRC |-----.
 *      _____.-----| F2  |_____| F4  | F5  |                     |LBKT |RBKT |_____|RBRC |-----._____
-*     |BTCLR|     |-----| F8  |-----|_____|                     |_____|-----| UP  |-----|MINUS|     |  
+*     |     |     |-----| F8  |-----|_____|                     |_____|-----| UP  |-----|BTTOG|     |  
 *     |_____|-----| F7  |_____| F9  | F10 |                     |LEFT | DOWN|_____|RIGHT|-----|_____|  
-*     |BTTOG| F6  |-----|TYPE |-----|_____|                     |_____|-----|PG_UP|-----|GAME |     |  
+*     |     | F6  |-----|TYPE |-----|_____|                     |_____|-----|PG_UP|-----|GAME |     |  
 *     |_____|-----| F1  |_____| F11 | F12 |                     | HOME|PG_DN|_____| END |-----|_____|  
-*     |BTNXT|     |-----'   .-'---.=|_____|.-.._           _..-.|_____|=.---'-.   '-----| / ? |     |
-*     !_____!-----'         | DEL |SHIFT| /     /         \     \ | NUM |RALT |         '-----!_____!
+*     |     |BTNXT|-----'   .-'---.=|_____|.-.._           _..-.|_____|=.---'-.   '-----| / ? |     |
+*     !_____!-----'         | DEL |SHIFT| /     /         \     \ |BTCLR|RALT |         '-----!_____!
 *                           '-----!_____!/ ENT /           \ SPC \!_____!-----'
 *                                       '--.._/             \_..--'
 *
@@ -171,10 +171,10 @@ numbers_layer {
 navigation_layer {
     label = "NAV";
     bindings = <
-        &bt BT_CLR &trans      &kp F2       &kp F3      &kp F4  &kp F5        &kp LBKT &kp RBKT  &kp LBRC  &kp RBRC  &kp MINUS &trans
-      &out OUT_TOG &kp F6      &kp F7       &kp F8      &kp F9  &kp F10       &kp LEFT &kp DOWN  &kp UP    &kp RIGHT &tog GAME &trans
-        &bt BT_NXT &none       &kp F1       &tog TYPE   &kp F11 &kp F12       &kp HOME &kp PG_DN &kp PG_UP &kp END   &kp FSLH  &trans
-                                        &kp DEL     &trans       &trans       &trans      &trans      &kp RALT      
+        &none      &trans      &kp F2       &kp F3      &kp F4  &kp F5        &kp LBKT &kp RBKT  &kp LBRC  &kp RBRC  &out OUT_TOG &trans
+        &none      &kp F6      &kp F7       &kp F8      &kp F9  &kp F10       &kp LEFT &kp DOWN  &kp UP    &kp RIGHT &tog GAME &trans
+        &none      &bt BT_NXT  &kp F1       &tog TYPE   &kp F11 &kp F12       &kp HOME &kp PG_DN &kp PG_UP &kp END   &kp FSLH  &trans
+                                        &kp DEL     &trans       &trans       &trans      &bt BT_CLR    &kp RALT      
                                         
                     &trans     &trans       &trans      &trans       &trans             &trans      &trans      &trans      &trans      &trans
     >;
