@@ -2,4 +2,4 @@ on: [push, pull_request, workflow_dispatch]
 
 jobs:
   build:
-    uses: maxdac/zmk/.github/workflows/build-user-config.yml@pre-version
+    uses: maxdac/zmk/.github/workflows/build-user-config.yml@main
