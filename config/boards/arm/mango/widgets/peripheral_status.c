@@ -31,7 +31,9 @@ static struct peripheral_status_state get_state(const zmk_event_t *_eh) {
 }
 
 static void set_status_symbol(lv_obj_t *icon, struct peripheral_status_state state) {
-    lv_img_set_src(icon, state.connected ? &bluetooth_connected : &bluetooth_disconnected);
+    lv_img_set_src(
+        icon, 
+        state.connected ? &bluetooth_connected : &bluetooth_disconnected);
 }
 
 static void peripheral_status_update_cb(struct peripheral_status_state state) {
