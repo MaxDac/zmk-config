@@ -56,7 +56,6 @@ lv_obj_t *zmk_display_status_screen() {
     lv_obj_t *LayersHeading;
     LayersHeading = lv_img_create(screen);
     lv_obj_align(LayersHeading, LV_ALIGN_BOTTOM_MID, 0, -30);
-    lv_img_set_src(LayersHeading, &layers2);
 
     zmk_widget_layer_status_init(&layer_status_widget, screen);
     lv_obj_set_style_text_font(zmk_widget_layer_status_obj(&layer_status_widget),
