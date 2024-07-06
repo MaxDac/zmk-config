@@ -22,12 +22,12 @@ keymap {
 *        ` ~             _____                                               _____
 *        |        .-----|  E  |-----._____                       _____.-----|  I  |-----.
 *      _____.-----|  W  |_____|  R  |  T  |                     |  Y  |  U  |_____|  O  |-----._____
-*     |     |Q/NAV|-----|  D  |-----|_____|                     |_____|-----|  K  |-----|  P  |     |  
+*     |     |  Q  |-----|  D  |-----|_____|                     |_____|-----|  K  |-----|  P  |     |  
 *     |_____|-----|  S  |_____|  F  |  G  |                     |  H  |  J  |_____|  L  |-----|_____|  
 *     |     |  A  |-----|  C  |-----|_____|                     |_____|-----| , < |-----| ; : |     |  
 *     |_____|-----|  X  |_____|  V  |  B  |                     |  N  |  M  |_____| . > |-----|_____|  
 *     |     |Z/LCT|-----'   .-'---.=|_____|.-.._           _..-.|_____|=.---'-.   '-----|ALT'"|     |
-*     !_____!-----'         | BSP |SHIFT| / ENT /         \     \ |TAB/N|ESC/C|         '-----!_____!
+*     !_____!-----'         |BSP/N|SHIFT| / ENT /         \     \ |TAB/N|ESC/C|         '-----!_____!
 *                           '-----!_____!/LGUI /           \ SPC \!_____!-----' 
 *                                       '--.._/             \_..--'
 *
@@ -44,10 +44,10 @@ keymap {
 default_layer {
     label = "BASE";
     bindings = <
-        &none      &lhkt NAV Q &kp W       &kp E       &kp R       &kp T               &kp Y       &kp U       &kp I       &kp O       &kp P          &none
+        &none      &kp Q       &kp W       &kp E       &kp R       &kp T               &kp Y       &kp U       &kp I       &kp O       &kp P          &none
         &none      &kp A       &kp S       &kp D       &kp F       &kp G               &kp H       &kp J       &kp K       &kp L       &mt LALT SEMI  &none
         &none      &mt LCTRL Z &kp X       &kp C       &kp V       &kp B               &kp N       &kp M       &kp COMMA   &kp DOT    &mt RSHIFT SQT  &none
-                                                &kp BSPC &kp LSHFT  &mt LGUI ENTER          &kp SPACE   &lhkt NUM TAB &mt RCTRL ESC
+                                    &lhkt NAV BSPC     &kp LSHFT  &mt LGUI ENTER          &kp SPACE   &lhkt NUM TAB &mt RCTRL ESC
 
         &rgb_ug RGB_BRD &kp C_VOL_UP &rgb_ug RGB_BRI &kp C_VOL_DN   &none               &none       &kp RIGHT   &kp UP      &kp LEFT    &kp DOWN
     >;
@@ -67,7 +67,7 @@ default_layer {
 *     |     |  A  |-----|  C  |-----|_____|                     |_____|-----| , < |-----| ; : |     |  
 *     |_____|-----|  X  |_____|  V  |  B  |                     |  N  |  M  |_____| . > |-----|_____|  
 *     |     |  Z  |-----'   .-'---.=|_____|.-.._           _..-.|_____|=.---'-.   '-----| ' " |     |
-*     !_____!-----'         |BSP/N|SHIFT| /LALT /         \     \ | DEF.|? CTR|         '-----!_____!
+*     !_____!-----'         |BSP/N|SHIFT| /LALT /         \     \ |T/NAV|? CTR|         '-----!_____!
 *                           '-----!_____!/ ENT /           \ SPC \!_____!-----' 
 *                                       '--.._/             \_..--'
 *
@@ -84,10 +84,10 @@ default_layer {
 type_layer {
     label = "TYPE";
     bindings = <
-        &trans      &kp Q       &trans      &trans      &trans      &trans              &trans      &trans      &trans      &trans      &trans      &trans
+        &trans      &trans      &trans      &trans      &trans      &trans              &trans      &trans      &trans      &trans      &trans      &trans
         &trans      &trans      &trans      &trans      &trans      &trans              &trans      &trans      &trans      &trans      &kp SEMI    &trans
         &trans      &kp Z       &trans      &trans      &trans      &trans              &trans      &trans      &trans      &trans      &kp SQT     &trans
-                                         &lhkt NUM BSPC &kp LSHFT   &mt LALT ENTER      &kp SPACE   &tog TYPE   &mt LCTRL FSLH
+                                         &lhkt NUM BSPC &kp LSHFT   &mt LALT ENTER      &kp SPACE   &ltlh TYPE NAV  &mt LCTRL FSLH
 
         &rgb_ug RGB_BRD &kp C_VOL_UP &rgb_ug RGB_BRI &kp C_VOL_DN   &none               &none       &kp RIGHT   &kp UP      &kp LEFT    &kp DOWN
     >;
@@ -134,12 +134,12 @@ numbers_layer {
 *        ` ~             _____                                               _____
 *        |        .-----| F3  |-----._____                       _____.-----|LBRC |-----.
 *      _____.-----| F2  |_____| F4  | F5  |                     |LBKT |RBKT |_____|RBRC |-----._____
-*     |     |     |-----| F8  |-----|_____|                     |_____|-----| UP  |-----|MINUS|     |  
+*     |     | F1  |-----| F8  |-----|_____|                     |_____|-----| UP  |-----|MINUS|     |  
 *     |_____|-----| F7  |_____| F9  | F10 |                     |LEFT | DOWN|_____|RIGHT|-----|_____|  
 *     |     | F6  |-----|TYPE |-----|_____|                     |_____|-----|PG_UP|-----|GAME |     |  
-*     |_____|-----| F1  |_____| F11 | F12 |                     | HOME|PG_DN|_____| END |-----|_____|  
-*     |     |     |-----'   .-'---.=|_____|.-.._           _..-.|_____|=.---'-.   '-----| / ? |     |
-*     !_____!-----'         | DEL |SHIFT| /     /         \     \ | NUM |RALT |         '-----!_____!
+*     |_____|-----| CONF|_____| F11 | F12 |                     | HOME|PG_DN|_____| END |-----|_____|  
+*     |     | DEL |-----'   .-'---.=|_____|.-.._           _..-.|_____|=.---'-.   '-----| / ? |     |
+*     !_____!-----'         |     |SHIFT| /     /         \     \ | NUM |RALT |         '-----!_____!
 *                           '-----!_____!/ ENT /           \ SPC \!_____!-----'
 *                                       '--.._/             \_..--'
 *
@@ -156,10 +156,10 @@ numbers_layer {
 navigation_layer {
     label = "NAV";
     bindings = <
-        &bt BT_CLR &trans       &kp F2       &kp F3      &kp F4  &kp F5        &kp LBKT &kp RBKT  &kp LBRC  &kp RBRC  &kp MINUS &trans
+        &bt BT_CLR &kp F1       &kp F2       &kp F3      &kp F4  &kp F5        &kp LBKT &kp RBKT  &kp LBRC  &kp RBRC  &kp MINUS &trans
       &out OUT_TOG &kp F6       &kp F7       &kp F8      &kp F9  &kp F10       &kp LEFT &kp DOWN  &kp UP    &kp RIGHT &tog GAME &trans
-        &bt BT_NXT &lhkt CONF Z &kp F1       &tog TYPE   &kp F11 &kp F12       &kp HOME &kp PG_DN &kp PG_UP &kp END   &kp FSLH  &trans
-                                        &kp DEL     &trans       &trans       &trans      &trans      &kp RALT      
+        &bt BT_NXT &kp DEL      &mo  CONF    &tog TYPE   &kp F11 &kp F12       &kp HOME &kp PG_DN &kp PG_UP &kp END   &kp FSLH  &trans
+                                        &none     &trans       &trans          &trans      &trans      &kp RALT      
                                         
                     &trans     &trans       &trans      &trans       &trans             &trans      &trans      &trans      &trans      &trans
     >;
@@ -401,5 +401,16 @@ behaviors {
         flavor = "hold-preferred";
         bindings = <&mo>, <&kp>;
     };
+
+    ltlh: layer_toggle_layer_hold {
+        compatible = "zmk,behavior-hold-tap";
+        label = "LAYER_TOGGLE_KEY_TAP";
+        #binding-cells = <2>;
+        tapping-term-ms = <200>;    // <---[[moderate duration]]
+        quick-tap-ms = <0>;
+        flavor = "hold-preferred";
+        bindings = <&tog>, <&mo>;
+    };
+
 };
 };
