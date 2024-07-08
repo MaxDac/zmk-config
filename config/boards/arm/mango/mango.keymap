@@ -409,7 +409,7 @@ behaviors {
         tapping-term-ms = <200>;    // <---[[moderate duration]]
         quick-tap-ms = <0>;
         flavor = "hold-preferred";
-        bindings = <&tog>, <&mo>;
+        bindings = <&mo>, <&tog>;
     };
 
 };
