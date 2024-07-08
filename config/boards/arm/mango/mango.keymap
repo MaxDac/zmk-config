@@ -67,7 +67,7 @@ default_layer {
 *     |     |  A  |-----|  C  |-----|_____|                     |_____|-----| , < |-----| ; : |     |  
 *     |_____|-----|  X  |_____|  V  |  B  |                     |  N  |  M  |_____| . > |-----|_____|  
 *     |     |  Z  |-----'   .-'---.=|_____|.-.._           _..-.|_____|=.---'-.   '-----| ' " |     |
-*     !_____!-----'         |BSP/N|SHIFT| /LALT /         \     \ |T/NAV|? CTR|         '-----!_____!
+*     !_____!-----'         |BSP/N|SHIFT| /LALT /         \     \ |B/NAV|? CTR|         '-----!_____!
 *                           '-----!_____!/ ENT /           \ SPC \!_____!-----' 
 *                                       '--.._/             \_..--'
 *
@@ -87,7 +87,7 @@ type_layer {
         &trans      &trans      &trans      &trans      &trans      &trans              &trans      &trans      &trans      &trans      &trans      &trans
         &trans      &trans      &trans      &trans      &trans      &trans              &trans      &trans      &trans      &trans      &kp SEMI    &trans
         &trans      &kp Z       &trans      &trans      &trans      &trans              &trans      &trans      &trans      &trans      &kp SQT     &trans
-                                         &lhkt NUM BSPC &kp LSHFT   &mt LALT ENTER      &kp SPACE   &ltlh TYPE NAV  &mt LCTRL FSLH
+                                         &lhkt NUM BSPC &kp LSHFT   &mt LALT ENTER      &kp SPACE   &ltlh NAV BASE  &mt LCTRL FSLH
 
         &rgb_ug RGB_BRD &kp C_VOL_UP &rgb_ug RGB_BRI &kp C_VOL_DN   &none               &none       &kp RIGHT   &kp UP      &kp LEFT    &kp DOWN
     >;
