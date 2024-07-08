@@ -87,7 +87,7 @@ type_layer {
         &trans      &trans      &trans      &trans      &trans      &trans              &trans      &trans      &trans      &trans      &trans      &trans
         &trans      &trans      &trans      &trans      &trans      &trans              &trans      &trans      &trans      &trans      &kp SEMI    &trans
         &trans      &kp Z       &trans      &trans      &trans      &trans              &trans      &trans      &trans      &trans      &kp SQT     &trans
-                                         &lhkt NUM BSPC &kp LSHFT   &mt LALT ENTER      &kp SPACE   &ltlh NAV BASE  &mt LCTRL FSLH
+                                         &lhkt NUM BSPC &kp LSHFT   &mt LALT ENTER      &kp SPACE   &ltlh NAV TYPE  &mt LCTRL FSLH
 
         &rgb_ug RGB_BRD &kp C_VOL_UP &rgb_ug RGB_BRI &kp C_VOL_DN   &none               &none       &kp RIGHT   &kp UP      &kp LEFT    &kp DOWN
     >;
