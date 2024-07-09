@@ -24,9 +24,9 @@ keymap {
 *      _____.-----|  W  |_____|  R  |  T  |                     |  Y  |  U  |_____|  O  |-----._____
 *     |     |  Q  |-----|  D  |-----|_____|                     |_____|-----|  K  |-----|  P  |     |  
 *     |_____|-----|  S  |_____|  F  |  G  |                     |  H  |  J  |_____|  L  |-----|_____|  
-*     |     |  A  |-----|  C  |-----|_____|                     |_____|-----| , < |-----| ; : |     |  
+*     |     |  A  |-----|  C  |-----|_____|                     |_____|-----| , < |-----|ALT;:|     |  
 *     |_____|-----|  X  |_____|  V  |  B  |                     |  N  |  M  |_____| . > |-----|_____|  
-*     |     |Z/LCT|-----'   .-'---.=|_____|.-.._           _..-.|_____|=.---'-.   '-----|ALT'"|     |
+*     |     |Z/LCT|-----'   .-'---.=|_____|.-.._           _..-.|_____|=.---'-.   '-----|SHF'"|     |
 *     !_____!-----'         |BSP/N|SHIFT| / ENT /         \     \ |TAB/N|ESC/C|         '-----!_____!
 *                           '-----!_____!/LGUI /           \ SPC \!_____!-----' 
 *                                       '--.._/             \_..--'
@@ -46,7 +46,7 @@ default_layer {
     bindings = <
         &none      &kp Q       &kp W       &kp E       &kp R       &kp T               &kp Y       &kp U       &kp I       &kp O       &kp P          &none
         &none      &kp A       &kp S       &kp D       &kp F       &kp G               &kp H       &kp J       &kp K       &kp L       &mt LALT SEMI  &none
-        &none      &mt LCTRL Z &kp X       &kp C       &kp V       &kp B               &kp N       &kp M       &kp COMMA   &kp DOT    &mt RSHIFT SQT  &none
+        &none      &mt LCTRL Z &kp X       &kp C       &kp V       &kp B               &kp N       &kp M       &kp COMMA   &kp DOT     &mt RSHIFT SQT &none
                                     &lhkt NUM BSPC     &kp LSHFT  &mt LGUI ENTER          &kp SPACE   &lhkt NAV TAB &mt RCTRL ESC
 
         &rgb_ug RGB_BRD &kp C_VOL_UP &rgb_ug RGB_BRI &kp C_VOL_DN   &none               &none       &kp RIGHT   &kp UP      &kp LEFT    &kp DOWN
@@ -103,7 +103,7 @@ type_layer {
 *     |     |  !  |-----| \ | |-----|_____|                     |_____|-----|  |  |-----|  )  |     |  
 *     |_____|-----| / ? |_____|  _  |  +  |                     | = + | - _ |_____|  >  |-----|_____|  
 *     |     | ` ~ |-----'   .-'---.=|_____|.-.._           _..-.|_____|=.---'-.   '-----|  "  |     |
-*     !_____!-----'         | DEL |SHIFT| /     /         \     \ | NUM | NAV |         '-----!_____!
+*     !_____!-----'         |     |SHIFT| /     /         \     \ | NUM | NAV |         '-----!_____!
 *                           '-----!_____!/ SPC /           \ SPC \!_____!-----'
 *                                       '--.._/             \_..--'
 *
@@ -136,10 +136,10 @@ numbers_layer {
 *      _____.-----| F2  |_____| F4  | F5  |                     |LBKT |RBKT |_____|RBRC |-----._____
 *     |     | F1  |-----| F8  |-----|_____|                     |_____|-----| UP  |-----|MINUS|     |  
 *     |_____|-----| F7  |_____| F9  | F10 |                     |LEFT | DOWN|_____|RIGHT|-----|_____|  
-*     |     | F6  |-----|TYPE |-----|_____|                     |_____|-----|PG_UP|-----|GAME |     |  
+*     |     | F6  |-----|TYPE |-----|_____|                     |_____|-----|PG_UP|-----|  (  |     |  
 *     |_____|-----| CONF|_____| F11 | F12 |                     | HOME|PG_DN|_____| END |-----|_____|  
-*     |     | DEL |-----'   .-'---.=|_____|.-.._           _..-.|_____|=.---'-.   '-----| / ? |     |
-*     !_____!-----'         |     |SHIFT| /     /         \     \ | NUM |RALT |         '-----!_____!
+*     |     | CTRL|-----'   .-'---.=|_____|.-.._           _..-.|_____|=.---'-.   '-----| / ? |     |
+*     !_____!-----'         | DEL |SHIFT| /     /         \     \ | NUM |RALT |         '-----!_____!
 *                           '-----!_____!/ ENT /           \ SPC \!_____!-----'
 *                                       '--.._/             \_..--'
 *
@@ -156,9 +156,9 @@ numbers_layer {
 navigation_layer {
     label = "NAV";
     bindings = <
-        &bt BT_CLR &kp F1       &kp F2       &kp F3      &kp F4  &kp F5        &kp LBKT &kp RBKT  &kp LBRC  &kp RBRC  &kp MINUS &trans
-      &out OUT_TOG &kp F6       &kp F7       &kp F8      &kp F9  &kp F10       &kp LEFT &kp DOWN  &kp UP    &kp RIGHT &tog GAME &trans
-        &bt BT_NXT &kp DEL      &mo  CONF    &tog TYPE   &kp F11 &kp F12       &kp HOME &kp PG_DN &kp PG_UP &kp END   &kp FSLH  &trans
+        &trans     &kp F1       &kp F2       &kp F3      &kp F4  &kp F5        &kp LBKT &kp RBKT  &kp LBRC  &kp RBRC  &kp MINUS &trans
+        &trans     &kp F6       &kp F7       &kp F8      &kp F9  &kp F10       &kp LEFT &kp DOWN  &kp UP    &kp RIGHT &kp LPAR  &trans
+        &trans     &kp LCTRL    &mo  CONF    &tog TYPE   &kp F11 &kp F12       &kp HOME &kp PG_DN &kp PG_UP &kp END   &kp FSLH  &trans
                                        &kp DEL    &trans       &trans          &trans      &trans      &kp RALT      
                                         
                     &trans     &trans       &trans      &trans       &trans             &trans      &trans      &trans      &trans      &trans
