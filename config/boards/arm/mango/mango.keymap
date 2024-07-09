@@ -192,9 +192,9 @@ navigation_layer {
 config_layer {
     label = "CONF";
     bindings = <
-        &bt BT_CLR &trans      &kp F2       &kp F3      &kp F4  &kp F5      &bt BT_CLR &kp RBKT  &kp LBRC  &kp RBRC  &kp MINUS &trans
-      &out OUT_TOG &kp F6      &kp F7       &kp F8      &kp F9  &kp F10   &out OUT_TOG &kp DOWN  &kp UP    &kp RIGHT &tog GAME &trans
-        &bt BT_NXT &none       &kp F1       &tog TYPE   &kp F11 &kp F12     &bt BT_NXT &kp PG_DN &kp PG_UP &kp END   &kp FSLH  &trans
+      &trans   &trans      &kp F2       &kp F3      &kp F4  &kp F5      &bt BT_CLR &kp RBKT  &kp LBRC  &kp RBRC  &kp MINUS &trans
+      &trans   &kp F6      &kp F7       &kp F8      &kp F9  &kp F10   &out OUT_TOG &kp DOWN  &kp UP    &kp RIGHT &tog GAME &trans
+      &trans   &none       &kp F1       &tog TYPE   &kp F11 &kp F12     &bt BT_NXT &kp PG_DN &kp PG_UP &kp END   &kp FSLH  &trans
                                         &kp DEL     &trans       &trans       &trans      &trans      &kp RALT      
                                         
                     &trans     &trans       &trans      &trans       &trans             &trans      &trans      &trans      &trans      &trans
